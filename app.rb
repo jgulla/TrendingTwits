@@ -5,6 +5,13 @@ require 'httpclient'
 require 'nokogiri'
 require 'TwitterTopics'
 
+
+# curl commands to get available locations and topics in a location:
+
+# curl http://api.twitter.com/1/trends/available.json | prettify_json.rb
+# curl http://api.twitter.com/1/trends/44418.json | prettify_json.rb
+# or as xml: curl http://api.twitter.com/1/trends/44418.xml
+
 get "/" do
   redirect "index.html"
 end
