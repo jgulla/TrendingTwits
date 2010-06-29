@@ -62,7 +62,7 @@ function getLocations(e, info)  {
 			jQuery.each(data, function() {
 			   // $ul.append("<li class='arrow' id='" + this.woeid + "'><a href='#topics'>" + this.name +  " (" + this.placeType.name + ")<small>" + curr_hour + ":" + curr_min + ":" + curr_sec + "</small>" + "</a></li>");
 //			   $ul.append("<li class='arrow' id='8888'><a id='9999' href='#topics'>" + this.name +  " (" + this.placeType.name + ")<small>" + curr_hour + ":" + curr_min + ":" + curr_sec + "</small>" + "</a></li>");
-			   $ul.append("<li class='arrow'><a href='/dlists2?woeid=" + this.woeid + "'>" + this.name +  " (" + this.placeType.name + ")<small>" + curr_hour + ":" + curr_min + ":" + curr_sec + "</small>" + "</a></li>");
+			   $ul.append("<li class='arrow'><a href='/topics?woeid=" + this.woeid + "'>" + this.name +  " (" + this.placeType.name + ")<small>" + curr_hour + ":" + curr_min + ":" + curr_sec + "</small>" + "</a></li>");
 			
 		 	});
 		    $ul.append("<li class='arrow'><a href=\"/dlists\">Dynamic Lists</a></li>");

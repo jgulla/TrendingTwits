@@ -1,8 +1,6 @@
 require 'rubygems'
 require 'httpclient'
-#require 'feedzirra'
 require 'nokogiri'
-require 'json'
 
 class TwitterTopics
 
@@ -16,7 +14,6 @@ class TwitterTopics
     index = 0
 
     doc.xpath('.//matching_trends/trends/trend').each do |node|
-      puts node.content
       topic_names.push(node.content)
     end
     topic_names
