@@ -16,7 +16,7 @@ get "/topics" do
   tc = TwitterTopics.new
   topics = tc.get_topics(params[:woeid])
   puts params[:woeid]
-  erb :dlists2, :layout => false, :locals => {:loc=>topics}
+  erb :topics, :layout => false, :locals => {:loc=>topics}
 end
 
 

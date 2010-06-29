@@ -11,8 +11,7 @@ class TwitterTopics
 
     doc = Nokogiri::HTML(content)
     topic_names = Array.new
-    index = 0
-
+    
     doc.xpath('.//matching_trends/trends/trend').each do |node|
       topic_names.push(node.content)
     end
