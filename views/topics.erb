@@ -1,0 +1,11 @@
+<div id="topics">
+  <div class="toolbar">
+    <a class="back">Back</a>
+    <h1>Topics</h1>
+  </div>
+  <ul class="plastic">
+	<% locals[:loc].each do | topic |%> 
+	 <li><%=topic%></li>
+	<%end%>
+  </ul>
+</div>
