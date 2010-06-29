@@ -1,0 +1,34 @@
+<%
+require "rubygems"
+require "sinatra"
+require "json"
+require 'httpclient'
+#require 'feedzirra'
+require 'nokogiri'
+require 'cclists'
+%>
+<div id="dlists">
+  <div class="toolbar">
+    <a class="back">Back</a>
+    <h1>Day</h1>
+  </div>
+  <ul class="plastic">
+    <li>Monday <small>23</small></li>
+    <li>Tuesday <small>15</small></li>
+    <li>Wednesday <small>5</small></li>
+    <li>Thursday <small>23</small></li>
+    <li>Friday <small>15</small></li>
+    <li class="weekend">Saturday <small>5</small></li>
+    <li class="weekend">Sunday <small>5</small></li>
+	<li class='arrow'><a href="/dlists2">DLists2</a></li>
+	<li class='arrow'><a href='#contacts'>Contacts <%= Time.now %></a></li>
+	<%nl = "<li>Ruby <small>1</small></li>"%>
+	<%= nl %>
+  </ul>
+  <div class="info">
+    Served at <%= Time.now %>
+  </div>
+	<script type="text/javascript">
+	</script>
+
+</div>

@@ -1,0 +1,67 @@
+
+
+/* project pages */
+.proj-list, .proj-header, .proj-footer {
+    /*
+	margin: 0;
+	margin-left: auto;
+	margin-right: auto;
+	*/
+	padding: 0;
+	width: 512px;
+	color: #666;
+}
+
+.proj-list {
+	background: url(http://media.liquidx.net/img/sw_bg.png) repeat-y top left;
+}
+
+.proj-header {
+	margin-bottom: -4px; /* TODO: for some reason, height = 69px but image = 64px? */
+}
+
+.proj-list ul {
+	padding: 32px;	
+	padding-top: 10px;
+	padding-bottom: 10px;
+	margin: 0;
+}
+
+.proj-list li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	margin-top: 5px;
+}
+
+.proj-list li p {
+	margin-left: 63px;
+}
+
+.proj-list p.meta {
+	color: #999;
+}
+
+.proj-list h4 { 
+	padding: 0;
+	font-size: x-large;
+	color: #000;
+	
+}
+
+.proj-list h4 a,  .proj-list h4 a:visited  {
+	text-decoration: none;
+}
+
+.proj-list h4 a:hover {
+	text-decoration: underline;
+}
+
+.proj-list h4 img {
+	margin: 5px;
+	margin-right: 10px;
+	vertical-align: middle;
+}
+
+/* last rule */
+
