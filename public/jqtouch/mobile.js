@@ -13,17 +13,20 @@ var jQT = new jQuery.jQTouch({
   ]
 });
 
+var app = {
+	refreshLocations: true
+};
+
 function getLocations(e, info)  {
 	// Bind to the page animation end. Page tag in index.html
 		if ( (info) && (info.direction === "out") ) {
 	      return;
 	    }
 
- 	    var $page = jQuery(this);
-	    if ($page.data("loaded")) {
-	      return;
-	    }
-
+		if (app.refreshLocations == false) {
+			return;
+		}
+		
 		jQuery.ajax({
 		  url: "/locations.json",
 		  dataType: 'json',
@@ -36,20 +39,19 @@ function getLocations(e, info)  {
 			var $ul = jQuery("#locations ul");
 			$ul.empty();
 			jQuery.each(data, function() {
-			   $ul.append("<li class='arrow'><a href='/topics?woeid=" + this.woeid + "&place=" + this.name + "'>" + this.name +  " (" + this.placeType.name + ")<small>" + curr_hour + ":" + curr_min + ":" + curr_sec + "</small>" + "</a></li>");
+			   $ul.append("<li class='arrow'><a href='/topics?woeid=" + this.woeid + "&place=" + this.name + "'>" + this.name +  " (" + this.placeType.name + ")" + "</a></li>");
 		 	});
 			$ul.append("<li>Last updated at " + curr_hour + ":" + curr_min + ":" + curr_sec + "</li>");
 	      } // success: function
 		  }); //jQuery.ajax
-	      $page.data("loaded", true);
+		  app.refreshLocations = false;
 } //getLocations
 
 
 jQuery(document).ready(function () { // Execute this when the DOM is ready
 
   jQuery("#refresh").bind("click", function(e) {
-		var $page = jQuery(this);
-		$page.data("loaded", false);
+	   app.refreshLocations = true;
 	   getLocations(e);
       });
 
