@@ -15,8 +15,11 @@ get "/topics" do
   content_type "application/json"
   tc = TwitterTopics.new
   topics = tc.get_topics(params[:woeid])
+  pl = params[:place]
   puts params[:woeid]
-  erb :topics, :layout => false, :locals => {:loc=>topics}
+  puts params[:place]
+  
+  erb :topics, :layout => false, :locals => {:loc=>topics,:place=>pl}
 end
 
 
