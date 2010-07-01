@@ -1,7 +1,7 @@
 var jQT = new jQuery.jQTouch({
-  icon:'quickview_for_android_icon.png',
+  icon:'logo.png',
   //addGlossToIcon: false,
-  startupScreen:"ctctlogo.png",
+  startupScreen:"logo.png",
   statusBar:'black-translucent',
   preloadImages:[
     '/jqtouch/themes/jqt/img/back_button.png',
